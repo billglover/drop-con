@@ -1,0 +1,12 @@
+---
+applications:
+- name: drop-con
+  memory: 32M
+  instances: 1
+  buildpacks:
+  - binary_buildpack
+  command: ./app
+  health-check-type: http
+  health-check-http-endpoint: /hi
+  labels:
+    behaviour: odd
